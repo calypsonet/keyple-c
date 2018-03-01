@@ -1,0 +1,19 @@
+; DLL export definition file
+
+LIBRARY												pcscPlgn
+;DESCRIPTION										"PCSC Plugin module library"
+
+VERSION												1.00
+
+EXPORTS
+	plgn_initPluginManager								@1
+	plgn_getPluginName									@2
+	plgn_getReaderDevNames								@3
+	plgn_getReaderByDevName								@4
+	plgn_setParameter									@5
+	plgn_getParameters									@6
+	plgn_getSeStatus									@7
+	plgn_transmit										@8
+	plgn_closeChannel									@9
+	plgn_terminateProxyReader							@10
+	plgn_terminatePluginManager							@11

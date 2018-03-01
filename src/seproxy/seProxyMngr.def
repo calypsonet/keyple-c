@@ -1,0 +1,30 @@
+; DLL export definition file
+
+LIBRARY												seProxyMngr
+;DESCRIPTION										"SE Proxy Manager module library"
+
+VERSION												1.00
+
+EXPORTS
+	initProxyManager								@1
+	getSupportedPlugins								@2
+	getPlugin										@3
+	getPluginName									@4
+	terminateProxyManager							@5
+	getReaderDevNames								@6
+	getReaderByDevName								@7
+	setReaderParameters								@8
+	getReaderParameters								@9
+	getSeStatus										@10
+	transmitRequests								@11
+
+	;OS Keyple Functions
+	OsKpl_Malloc									@100
+	OsKpl_Free										@101
+	OsKpl_MemoryState								@102
+	OsKpl_Memset									@103
+	OsKpl_Memcpy									@104
+	
+	OsKpl_Strlen									@150
+	OsKpl_Strcpy									@151
+	OsKpl_Strcmp									@152
