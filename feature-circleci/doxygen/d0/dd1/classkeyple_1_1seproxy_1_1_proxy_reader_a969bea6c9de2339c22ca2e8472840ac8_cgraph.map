@@ -1,0 +1,17 @@
+<map id="keyple::seproxy::ProxyReader::transmit" name="keyple::seproxy::ProxyReader::transmit">
+<area shape="rect" id="node2" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#af5f59071acf91938ca87218c11ad1503" title="OsKpl_Memset" alt="" coords="249,5,342,32"/>
+<area shape="rect" id="node3" href="$d2/d35/classkeyple_1_1seproxy_1_1_se_request.html#a6e69d629c99d09a8b06da7271ef05561" title="keyple::seproxy::SeRequest\l::getAidToSelectLength" alt="" coords="219,57,371,98"/>
+<area shape="rect" id="node4" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#a1f6b6a8a05285269c76def4d8fb41d69" title="OsKpl_Memcpy" alt="" coords="643,373,737,400"/>
+<area shape="rect" id="node5" href="$d2/d35/classkeyple_1_1seproxy_1_1_se_request.html#a5139bf458b7815623dc5f9633be24739" title="keyple::seproxy::SeRequest\l::getAidToSelect" alt="" coords="219,174,371,215"/>
+<area shape="rect" id="node6" href="$d2/d35/classkeyple_1_1seproxy_1_1_se_request.html#a56b644ef533a19fae7c33c259410c75e" title="keyple::seproxy::SeRequest\l::askKeepChannelOpen" alt="" coords="219,239,371,281"/>
+<area shape="rect" id="node7" href="$d2/d35/classkeyple_1_1seproxy_1_1_se_request.html#ae55752c57ffe7e708c52b80892e124e9" title="keyple::seproxy::SeRequest\l::getApduRequests" alt="" coords="219,305,371,346"/>
+<area shape="rect" id="node8" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#ae460c328b7399998f7e8377dbe8ec85b" title="OsKpl_Malloc" alt="" coords="252,371,339,397"/>
+<area shape="rect" id="node9" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#a8ad6f93ec0ce8ebe7e9162d2e274e8f7" title="OsKpl_Free" alt="" coords="257,421,334,448"/>
+<area shape="rect" id="node10" href="$d0/d8d/plugin_mngr_8c.html#a55bfc0b0348f0cc5dafdfce7656a6771" title="transmitRequests" alt="" coords="243,472,348,499"/>
+<area shape="rect" id="node11" href="$d2/d80/classkeyple_1_1seproxy_1_1_se_response.html#aa2ee5d01a08691c8871311d418697809" title="keyple::seproxy::SeResponse\l::setData" alt="" coords="216,523,375,565"/>
+<area shape="rect" id="node16" href="$d2/d80/classkeyple_1_1seproxy_1_1_se_response.html#a841f3bd62164c0ae5f8f6e22b550494b" title="keyple::seproxy::SeResponse\l::getApduResponses" alt="" coords="216,589,375,630"/>
+<area shape="rect" id="node12" href="$dc/d1e/classkeyple_1_1seproxy_1_1_apdu_response.html#a817ef201e65fd933c50e4ce3fa759c3e" title="keyple::seproxy::ApduResponse\l::setApdu" alt="" coords="423,425,595,466"/>
+<area shape="rect" id="node13" href="$dc/d1e/classkeyple_1_1seproxy_1_1_apdu_response.html#ac922f75119e6d7d97bcecf281376a036" title="keyple::seproxy::ApduResponse\l::getApdu" alt="" coords="423,490,595,531"/>
+<area shape="rect" id="node14" href="$dc/d1e/classkeyple_1_1seproxy_1_1_apdu_response.html#a0eed0a5935bffcd01a2e8f07d8801611" title="keyple::seproxy::ApduResponse\l::getApduLength" alt="" coords="423,555,595,597"/>
+<area shape="rect" id="node15" href="$dc/d1e/classkeyple_1_1seproxy_1_1_apdu_response.html#a29c43656a2d51a36d02901b740d30697" title="keyple::seproxy::ApduResponse\l::isSuccessful" alt="" coords="423,621,595,662"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="/root/project/src/seproxy/seProxy.h" name="/root/project/src/seproxy/seProxy.h">
+<area shape="rect" id="node2" href="$da/df5/pcsc_plgn_8h.html" title="/root/project/src/pcscplugin\l/pcscPlgn.h" alt="" coords="5,95,160,136"/>
+<area shape="rect" id="node3" href="$d9/dc4/plugin_8h.html" title="/root/project/src/seproxy\l/plugin.h" alt="" coords="184,95,325,136"/>
+<area shape="rect" id="node6" href="$db/d6e/plugin_mngr_8h.html" title="/root/project/src/seproxy\l/pluginMngr.h" alt="" coords="349,95,491,136"/>
+<area shape="rect" id="node7" href="$dc/d49/se_proxy_mngr_8h.html" title="/root/project/src/seproxy\l/seProxyMngr.h" alt="" coords="599,95,740,136"/>
+<area shape="rect" id="node4" href="$d0/d8d/plugin_mngr_8c.html" title="/root/project/src/seproxy\l/pluginMngr.c" alt="" coords="184,184,325,225"/>
+<area shape="rect" id="node5" href="$d2/dea/se_proxy_mngr_8c.html" title="/root/project/src/seproxy\l/seProxyMngr.c" alt="" coords="349,184,491,225"/>
+<area shape="rect" id="node8" href="$de/d7e/_proxy_reader_8cpp.html" title="/root/project/src/seproxy\l/ProxyReader.cpp" alt="" coords="851,184,992,225"/>
+<area shape="rect" id="node9" href="$d8/d67/_readers_plugin_8cpp.html" title="/root/project/src/seproxy\l/ReadersPlugin.cpp" alt="" coords="1016,184,1157,225"/>
+<area shape="rect" id="node10" href="$db/d47/_se_proxy_service_8cpp.html" title="/root/project/src/seproxy\l/SeProxyService.cpp" alt="" coords="515,184,656,225"/>
+<area shape="rect" id="node11" href="$d2/d16/se_proxy_tester_8cpp.html" title="/root/project/src/terminal\l/seProxyTester.cpp" alt="" coords="680,184,827,225"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="keyple::seproxy::ReadersPlugin::ReadersPlugin" name="keyple::seproxy::ReadersPlugin::ReadersPlugin">
+<area shape="rect" id="node2" href="$d2/dea/se_proxy_mngr_8c.html#a1aae5f9e8aca67df54b385d4f0ec7acc" title="getPlugin" alt="" coords="223,93,291,120"/>
+<area shape="rect" id="node3" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#ae460c328b7399998f7e8377dbe8ec85b" title="OsKpl_Malloc" alt="" coords="379,5,465,32"/>
+<area shape="rect" id="node6" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#a8ad6f93ec0ce8ebe7e9162d2e274e8f7" title="OsKpl_Free" alt="" coords="383,157,461,184"/>
+<area shape="rect" id="node7" href="$d0/d8d/plugin_mngr_8c.html#a898cafe226eea7a104a1d537396426af" title="getPluginName" alt="" coords="208,195,305,221"/>
+<area shape="rect" id="node8" href="$d0/d8d/plugin_mngr_8c.html#a02a413f46587fc2790f7520ed187e176" title="getReaderDevNames" alt="" coords="195,245,319,272"/>
+<area shape="rect" id="node9" href="$da/dc5/pcscplugin_2os_kpl_str_8c.html#a48b1d0517db4d867e7a19f6eb7d6ce4e" title="OsKpl_Strlen" alt="" coords="215,296,298,323"/>
+<area shape="rect" id="node4" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#af5f59071acf91938ca87218c11ad1503" title="OsKpl_Memset" alt="" coords="375,56,469,83"/>
+<area shape="rect" id="node5" href="$d0/d8d/plugin_mngr_8c.html#a45c4af4c4a5c9b67cbc621448fdcdb03" title="initPluginManager" alt="" coords="367,107,477,133"/>
+</map>

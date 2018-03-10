@@ -1,0 +1,9 @@
+<map id="keyple::seproxy::ProxyReader::setParameters" name="keyple::seproxy::ProxyReader::setParameters">
+<area shape="rect" id="node2" href="$d0/d8d/plugin_mngr_8c.html#af3cc9f9af952cfb6c340091d2a2cf6d0" title="getReaderByDevName" alt="" coords="216,56,348,83"/>
+<area shape="rect" id="node3" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#ae460c328b7399998f7e8377dbe8ec85b" title="OsKpl_Malloc" alt="" coords="399,5,486,32"/>
+<area shape="rect" id="node5" href="$da/dc5/pcscplugin_2os_kpl_str_8c.html#a9007050a71e0d0e8c4e2dda7b83a1d2c" title="OsKpl_Strcpy" alt="" coords="401,107,485,133"/>
+<area shape="rect" id="node6" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#a8ad6f93ec0ce8ebe7e9162d2e274e8f7" title="OsKpl_Free" alt="" coords="404,157,481,184"/>
+<area shape="rect" id="node7" href="$d0/d8d/plugin_mngr_8c.html#a61e5130cab0ec1a9d45a04d3d9803461" title="setReaderParameters" alt="" coords="219,208,345,235"/>
+<area shape="rect" id="node4" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#af5f59071acf91938ca87218c11ad1503" title="OsKpl_Memset" alt="" coords="396,56,489,83"/>
+<area shape="rect" id="node8" href="$da/dc5/pcscplugin_2os_kpl_str_8c.html#a60b96d5fcc188dd35048fcb40b94642a" title="OsKpl_Strcmp" alt="" coords="399,208,487,235"/>
+</map>

@@ -1,0 +1,20 @@
+<map id="test_c_interface" name="test_c_interface">
+<area shape="rect" id="node2" href="$d2/dea/se_proxy_mngr_8c.html#ace2cf06edf19351598c80786431d1975" title="initProxyManager" alt="" coords="165,40,271,67"/>
+<area shape="rect" id="node3" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#ae460c328b7399998f7e8377dbe8ec85b" title="OsKpl_Malloc" alt="" coords="344,40,431,67"/>
+<area shape="rect" id="node4" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#af5f59071acf91938ca87218c11ad1503" title="OsKpl_Memset" alt="" coords="341,91,434,117"/>
+<area shape="rect" id="node5" href="$d2/dea/se_proxy_mngr_8c.html#a14ee185ad320de88aedcc5017f903797" title="getSupportedPlugins" alt="" coords="157,344,279,371"/>
+<area shape="rect" id="node6" href="$d2/dea/se_proxy_mngr_8c.html#a1aae5f9e8aca67df54b385d4f0ec7acc" title="getPlugin" alt="" coords="184,141,252,168"/>
+<area shape="rect" id="node8" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#a8ad6f93ec0ce8ebe7e9162d2e274e8f7" title="OsKpl_Free" alt="" coords="349,192,426,219"/>
+<area shape="rect" id="node9" href="$d0/d8d/plugin_mngr_8c.html#a898cafe226eea7a104a1d537396426af" title="getPluginName" alt="" coords="169,395,267,421"/>
+<area shape="rect" id="node10" href="$d0/d8d/plugin_mngr_8c.html#a02a413f46587fc2790f7520ed187e176" title="getReaderDevNames" alt="" coords="156,445,280,472"/>
+<area shape="rect" id="node11" href="$da/dc5/pcscplugin_2os_kpl_str_8c.html#a48b1d0517db4d867e7a19f6eb7d6ce4e" title="OsKpl_Strlen" alt="" coords="177,496,259,523"/>
+<area shape="rect" id="node12" href="$d0/d8d/plugin_mngr_8c.html#af3cc9f9af952cfb6c340091d2a2cf6d0" title="getReaderByDevName" alt="" coords="152,192,284,219"/>
+<area shape="rect" id="node14" href="$d0/d8d/plugin_mngr_8c.html#a0443ae17789a6f9fb862bd71a14453c6" title="getReaderParameters" alt="" coords="154,293,282,320"/>
+<area shape="rect" id="node15" href="$d0/d8d/plugin_mngr_8c.html#a61e5130cab0ec1a9d45a04d3d9803461" title="setReaderParameters" alt="" coords="155,547,281,573"/>
+<area shape="rect" id="node17" href="$d0/d8d/plugin_mngr_8c.html#a0feae7a9e8d706834049fe08acc72952" title="getSeStatus" alt="" coords="179,597,257,624"/>
+<area shape="rect" id="node18" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#a1f6b6a8a05285269c76def4d8fb41d69" title="OsKpl_Memcpy" alt="" coords="171,648,265,675"/>
+<area shape="rect" id="node19" href="$d0/d8d/plugin_mngr_8c.html#a55bfc0b0348f0cc5dafdfce7656a6771" title="transmitRequests" alt="" coords="165,699,271,725"/>
+<area shape="rect" id="node7" href="$d0/d8d/plugin_mngr_8c.html#a45c4af4c4a5c9b67cbc621448fdcdb03" title="initPluginManager" alt="" coords="332,141,443,168"/>
+<area shape="rect" id="node13" href="$da/dc5/pcscplugin_2os_kpl_str_8c.html#a9007050a71e0d0e8c4e2dda7b83a1d2c" title="OsKpl_Strcpy" alt="" coords="345,268,429,295"/>
+<area shape="rect" id="node16" href="$da/dc5/pcscplugin_2os_kpl_str_8c.html#a60b96d5fcc188dd35048fcb40b94642a" title="OsKpl_Strcmp" alt="" coords="343,547,431,573"/>
+</map>

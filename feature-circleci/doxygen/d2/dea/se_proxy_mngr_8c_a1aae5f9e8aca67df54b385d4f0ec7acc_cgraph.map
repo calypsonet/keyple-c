@@ -1,0 +1,6 @@
+<map id="getPlugin" name="getPlugin">
+<area shape="rect" id="node2" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#ae460c328b7399998f7e8377dbe8ec85b" title="OsKpl_Malloc" alt="" coords="133,5,220,32"/>
+<area shape="rect" id="node3" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#af5f59071acf91938ca87218c11ad1503" title="OsKpl_Memset" alt="" coords="130,56,223,83"/>
+<area shape="rect" id="node4" href="$d0/d8d/plugin_mngr_8c.html#a45c4af4c4a5c9b67cbc621448fdcdb03" title="initPluginManager" alt="" coords="121,107,232,133"/>
+<area shape="rect" id="node5" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#a8ad6f93ec0ce8ebe7e9162d2e274e8f7" title="OsKpl_Free" alt="" coords="138,157,215,184"/>
+</map>

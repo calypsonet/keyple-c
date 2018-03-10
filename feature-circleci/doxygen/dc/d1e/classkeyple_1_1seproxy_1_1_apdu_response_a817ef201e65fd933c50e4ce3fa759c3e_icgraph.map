@@ -1,0 +1,6 @@
+<map id="keyple::seproxy::ApduResponse::setApdu" name="keyple::seproxy::ApduResponse::setApdu">
+<area shape="rect" id="node2" href="$dc/d1e/classkeyple_1_1seproxy_1_1_apdu_response.html#a275e1f7bc72f6004d23aa693e80d436a" title="keyple::seproxy::ApduResponse\l::ApduResponse" alt="" coords="225,5,397,47"/>
+<area shape="rect" id="node3" href="$d2/d80/classkeyple_1_1seproxy_1_1_se_response.html#aa2ee5d01a08691c8871311d418697809" title="keyple::seproxy::SeResponse\l::setData" alt="" coords="232,71,391,112"/>
+<area shape="rect" id="node4" href="$d0/dd1/classkeyple_1_1seproxy_1_1_proxy_reader.html#a969bea6c9de2339c22ca2e8472840ac8" title="keyple::seproxy::ProxyReader\l::transmit" alt="" coords="445,37,608,79"/>
+<area shape="rect" id="node5" href="$d2/d80/classkeyple_1_1seproxy_1_1_se_response.html#a10e3daba812fdd506d9c10a309ebb6d6" title="keyple::seproxy::SeResponse\l::SeResponse" alt="" coords="447,103,606,144"/>
+</map>

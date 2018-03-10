@@ -1,0 +1,7 @@
+<map id="keyple::seproxy::SeResponse::setData" name="keyple::seproxy::SeResponse::setData">
+<area shape="rect" id="node2" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#a1f6b6a8a05285269c76def4d8fb41d69" title="OsKpl_Memcpy" alt="" coords="432,12,527,39"/>
+<area shape="rect" id="node3" href="$dc/d1e/classkeyple_1_1seproxy_1_1_apdu_response.html#a817ef201e65fd933c50e4ce3fa759c3e" title="keyple::seproxy::ApduResponse\l::setApdu" alt="" coords="212,34,384,76"/>
+<area shape="rect" id="node4" href="$dc/d1e/classkeyple_1_1seproxy_1_1_apdu_response.html#ac922f75119e6d7d97bcecf281376a036" title="keyple::seproxy::ApduResponse\l::getApdu" alt="" coords="212,100,384,141"/>
+<area shape="rect" id="node5" href="$dc/d1e/classkeyple_1_1seproxy_1_1_apdu_response.html#a0eed0a5935bffcd01a2e8f07d8801611" title="keyple::seproxy::ApduResponse\l::getApduLength" alt="" coords="212,165,384,206"/>
+<area shape="rect" id="node6" href="$dc/d1e/classkeyple_1_1seproxy_1_1_apdu_response.html#a29c43656a2d51a36d02901b740d30697" title="keyple::seproxy::ApduResponse\l::isSuccessful" alt="" coords="212,230,384,272"/>
+</map>

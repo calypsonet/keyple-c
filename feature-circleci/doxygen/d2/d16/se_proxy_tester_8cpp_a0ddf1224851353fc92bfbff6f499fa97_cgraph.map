@@ -1,0 +1,11 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$d2/d16/se_proxy_tester_8cpp.html#a73025e4e967a8ff7372c2d45e468f0c4" title="test_cpp_interface" alt="" coords="100,78,211,105"/>
+<area shape="rect" id="node3" href="$d0/d98/classkeyple_1_1seproxy_1_1_se_proxy_service.html#a206383cd011d892704ffbbc53bf1ba68" title="keyple::seproxy::SeProxy\lService::getInstance" alt="" coords="259,5,397,47"/>
+<area shape="rect" id="node4" href="$d0/d98/classkeyple_1_1seproxy_1_1_se_proxy_service.html#af464c436ca421c7ba1e06acba98b1620" title="keyple::seproxy::SeProxy\lService::getVersion" alt="" coords="259,71,397,112"/>
+<area shape="rect" id="node5" href="$d0/d98/classkeyple_1_1seproxy_1_1_se_proxy_service.html#acac3dfa6e0af9bf697812921f86eccb8" title="keyple::seproxy::SeProxy\lService::getPlugins" alt="" coords="259,136,397,177"/>
+<area shape="rect" id="node6" href="$d2/dea/se_proxy_mngr_8c.html#ace2cf06edf19351598c80786431d1975" title="initProxyManager" alt="" coords="461,118,568,145"/>
+<area shape="rect" id="node7" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#ae460c328b7399998f7e8377dbe8ec85b" title="OsKpl_Malloc" alt="" coords="635,67,722,94"/>
+<area shape="rect" id="node9" href="$d2/dea/se_proxy_mngr_8c.html#a14ee185ad320de88aedcc5017f903797" title="getSupportedPlugins" alt="" coords="454,169,575,195"/>
+<area shape="rect" id="node10" href="$d2/dea/se_proxy_mngr_8c.html#a13c5bb0517a8c0c0c8b039e82be26d55" title="terminateProxyManager" alt="" coords="445,219,584,246"/>
+<area shape="rect" id="node8" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#af5f59071acf91938ca87218c11ad1503" title="OsKpl_Memset" alt="" coords="632,118,725,145"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="getReaderByDevName" name="getReaderByDevName">
+<area shape="rect" id="node2" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#ae460c328b7399998f7e8377dbe8ec85b" title="OsKpl_Malloc" alt="" coords="189,5,275,32"/>
+<area shape="rect" id="node3" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#af5f59071acf91938ca87218c11ad1503" title="OsKpl_Memset" alt="" coords="185,56,279,83"/>
+<area shape="rect" id="node4" href="$da/dc5/pcscplugin_2os_kpl_str_8c.html#a9007050a71e0d0e8c4e2dda7b83a1d2c" title="OsKpl_Strcpy" alt="" coords="190,107,274,133"/>
+<area shape="rect" id="node5" href="$d9/dbc/pcscplugin_2os_kpl_mem_8c.html#a8ad6f93ec0ce8ebe7e9162d2e274e8f7" title="OsKpl_Free" alt="" coords="193,157,271,184"/>
+</map>
