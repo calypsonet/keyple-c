@@ -1,2 +1,2 @@
 # calypso_sdk_c
-Calypso SDK (C)
+Calypso SDK embedded C version

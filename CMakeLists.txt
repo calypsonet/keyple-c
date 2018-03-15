@@ -1,43 +1,20 @@
-PROJECT(keyple C CXX)
-CMAKE_MINIMUM_REQUIRED(VERSION 3.09)
-SET(VERSION_MAJOR "0")
-SET(VERSION_MINOR "1")
-SET(VERSION_PATCH "0")
+#
+# Copyright (c) 2018 Calypso Networks Association https://www.calypsonet-asso.org/
+#
+# All rights reserved. This program and the accompanying materials are made available under the
+# terms of the Eclipse Public License version 2.0 which accompanies this distribution, and is
+# available at https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html
+#
+cmake_minimum_required(VERSION 2.8)
 
-SET(VERSION "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}")
+# The SDK version number.
+set (KEYPLE_SDK_VERSION_MAJOR 0)
+set (KEYPLE_SDK_VERSION_MINOR 1)
 
-SET(PACKAGE_NAME "libkeyple")
-SET(PACKAGE_VERSION ${VERSION})
-SET(PACKAGE_STRING "${PACKAGE_NAME} ${PACKAGE_VERSION}")
+# configure the SDK
+add_subdirectory( ${CMAKE_CURRENT_SOURCE_DIR}/keyple-core )
 
-ADD_DEFINITIONS(-DK_OS_KPL_PLATFORM=K_OS_KPL_PLATFORM_WIN32 -DK_KPL_PCSC_PLUGIN_SUPPORT -DK_OS_KPL_MEMORY_DEBUG -D_CRT_SECURE_NO_WARNINGS)
-INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/src/seproxy ${CMAKE_CURRENT_SOURCE_DIR}/src/pcscplugin) 
+# implementation examples
+add_subdirectory( ${CMAKE_CURRENT_SOURCE_DIR}/keyple-examples/pc_pcsc )
 
-# SeProxyMngr library
-add_library(SeProxyMngr SHARED
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/seproxy/seProxyMngr.c 
-	${CMAKE_CURRENT_SOURCE_DIR}/src/seproxy/pluginMngr.c 
-	${CMAKE_CURRENT_SOURCE_DIR}/src/pcscplugin/pcscPlgn.c 
-	${CMAKE_CURRENT_SOURCE_DIR}/src/seproxy/osKplMem.c 
-	${CMAKE_CURRENT_SOURCE_DIR}/src/seproxy/osKplStr.c 
-	${CMAKE_CURRENT_SOURCE_DIR}/src/seproxy/seProxyMngr.def 
-)
-
-IF(WIN32)
-target_link_libraries(SeProxyMngr winscard)
-ENDIF(WIN32)
-
-# add the executable
-add_executable (SeProxyTester 
-	${CMAKE_CURRENT_SOURCE_DIR}/src/seproxy/ApduResponse.cpp 
-	${CMAKE_CURRENT_SOURCE_DIR}/src/seproxy/ApduRequest.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/src/seproxy/SeRequest.cpp 
-	${CMAKE_CURRENT_SOURCE_DIR}/src/seproxy/SeResponse.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/src/seproxy/ProxyReader.cpp 
-	${CMAKE_CURRENT_SOURCE_DIR}/src/seproxy/ReadersPlugin.cpp 
-	${CMAKE_CURRENT_SOURCE_DIR}/src/seproxy/SeProxyService.cpp 
-	${CMAKE_CURRENT_SOURCE_DIR}/src/terminal/SeProxyTester.cpp 
-)
-
-target_link_libraries(SeProxyTester SeProxyMngr)
-
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/keyple-examples/pc_pcsc PROPERTY VS_STARTUP_PROJECT ExamplePCSC)
