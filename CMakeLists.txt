@@ -12,7 +12,7 @@ set (KEYPLE_SDK_VERSION_MAJOR 0)
 set (KEYPLE_SDK_VERSION_MINOR 1)
 
 # configure the SDK
-add_subdirectory( ${CMAKE_CURRENT_SOURCE_DIR}/keyple-core )
+#add_subdirectory( ${CMAKE_CURRENT_SOURCE_DIR}/keyple-core )
 
 # implementation examples
 add_subdirectory( ${CMAKE_CURRENT_SOURCE_DIR}/keyple-examples/pc_pcsc )

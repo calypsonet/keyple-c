@@ -6,6 +6,10 @@
 * available at https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html
 */
 
-#ifndef KEYPLE_BER_TLV_H
-#define KEYPLE_BER_TLV_H
-#endif // KEYPLE_BER_TLV_H
+#ifndef PCSC_READER_H
+#define PCSC_READER_H
+
+int pcsc_init();
+struct reader_s *pcsc_init_reader(const char *readername, uint16_t readerid);
+
+#endif // PCSC_READER_H

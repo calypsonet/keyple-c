@@ -1,13 +1,25 @@
+/*
+* Copyright (c) 2018 Calypso Networks Association https://www.calypsonet-asso.org/
+*
+* All rights reserved. This program and the accompanying materials are made available under the
+* terms of the Eclipse Public License version 2.0 which accompanies this distribution, and is
+* available at https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html
+*/
+
 #include <stdio.h>
 
-#include "keyple_reader_interface.h"
-#include "pcsc_readers.h"
+#include "keyple.h"
+#include "keyple_serequest.h"
+#include "keyple_serequest_pool.h"
 
-#define PO_READER_NAME "ASK"
-#define CSM_READER_NAME "Identive"
+#include "log.h"
+#include "pcsc_reader.h"
 
-#define PO_READER_INDEX 0
-#define CSM_READER_INDEX 1
+#define PO_READER_NAME "ASK LoGO 0"
+#define CSM_READER_NAME "SCM Microsystems Inc. SCR35xx USB Smart Card Reader 0"
+
+#define PO_READER_ID 0
+#define CSM_READER_ID 1
 
 #define POOL_INDEX_0 0
 
@@ -17,104 +29,81 @@
 #define P2 3
 #define P3 4
 
+struct reader_s *po_reader, *csm_reader;
+
 static int doTransaction(void)
 {
-    uint8_t pool[1024]                           = {0};
-    struct requestParameters_s requestParameters = {0};
-    struct apduCommand_s *command1, *command2, *command3;
-    struct apduResponse_s *response1, *response2, *response3;
-
-    provideMemoryPool(POOL_INDEX_0, pool, sizeof(pool));
-
-    // APDUs allocations
-    if (linkNewApdu(POOL_INDEX_0, &command1, NULL, 5, &response1, NULL, 256) != EXECUTION_OK)
-    {
-        return -1;
-    }
-    if (linkNewApdu(POOL_INDEX_0, &command2, &command1, 5, &response2, &response1, 256) != EXECUTION_OK)
-    {
-        return -1;
-    }
-    if (linkNewApdu(POOL_INDEX_0, &command3, &command2, 5, &response3, &response2, 256) != EXECUTION_OK)
-    {
-        return -1;
-    }
-
-    command1->data[CLA] = 0x00;
-    command1->data[INS] = 0xB0;
-    command1->data[P1]  = 0x00;
-    command1->data[P2]  = 0x00;
-    command1->data[P3]  = 0x00;
-    command1->len       = 5;
-
-    command2->data[CLA] = 0x00;
-    command2->data[INS] = 0xD0;
-    command2->data[P1]  = 0x00;
-    command2->data[P2]  = 0x00;
-    command2->data[P3]  = 0x00;
-    command2->len       = 5;
-
-    command3->data[CLA] = 0x00;
-    command3->data[INS] = 0x84;
-    command3->data[P1]  = 0x00;
-    command3->data[P2]  = 0x00;
-    command3->data[P3]  = 0x08;
-    command3->len       = 5;
-
-    executeRequest(PO_READER_INDEX, requestParameters, command1, response1);
-
     return 0;
 }
 
 int main(void)
 {
-    bool allReadersFound = false;
-    char readerNames[NBR_READERS][READER_NAME_MAX_LENGTH];
+    uint8_t pool_buffer[512];
+    struct apdupool_s pool;
+    struct serequest_params_s se_req;
+    struct apdu_command_s *cmd;
+    struct apdu_response_s *resp;
 
-    if (initPcsc(readerNames[0], readerNames[1]) == KPL_RDR_SUCCESS)
+    // keyple global init
+    keyple_init(&keyple_ctx);
+
+    keyple_ctx.logs = &log_functions;
+
+    // readers init
+    pcsc_init();
+
+    po_reader  = pcsc_init_reader(PO_READER_NAME, PO_READER_ID);
+    csm_reader = pcsc_init_reader(CSM_READER_NAME, CSM_READER_ID);
+
+    keyple_addreader(&keyple_ctx, po_reader);
+    keyple_addreader(&keyple_ctx, csm_reader);
+
+    // request pool init
+    serequest_define_pool(&pool, pool_buffer, sizeof(pool_buffer));
+    serequest_reset_pool(&pool);
+
+    // request init
+    serequest_init(&se_req);
+
+    // ADPU 1
+    cmd = serequest_alloccommand(&pool, 5);
+
+    cmd->data[0] = 0xFF;
+    cmd->data[1] = 0xCA;
+    cmd->data[2] = 0x00;
+    cmd->data[3] = 0x00;
+    cmd->data[4] = 0x00;
+
+    cmd->len = 5;
+
+    resp = serequest_allocresponse(&pool, 100);
+
+    serequest_addapdu(&se_req, cmd, resp);
+
+    // APDU 2
+    cmd = serequest_alloccommand(&pool, 5);
+
+    cmd->data[0] = 0xFF;
+    cmd->data[1] = 0xD0;
+    cmd->data[2] = 0x00;
+    cmd->data[3] = 0x00;
+    cmd->data[4] = 0x00;
+
+    cmd->len = 5;
+
+    resp = serequest_allocresponse(&pool, 100);
+
+    serequest_addapdu(&se_req, cmd, resp);
+
+    // execute the 2 APDUs
+    uint8_t atr[32];
+    uint16_t atrlen;
+    while (po_reader->ops->openchannel(po_reader, atr, &atrlen) != KPL_SUCCESS)
     {
-        if (strstr(readerNames[0], PO_READER_NAME) != NULL)
-        {
-            assignReader(PO_READER_INDEX, readerNames[0]);
-            if (strstr(readerNames[1], CSM_READER_NAME) != NULL)
-            {
-                assignReader(CSM_READER_INDEX, readerNames[1]);
-                allReadersFound = true;
-            }
-        }
-        else
-        {
-            if (strstr(readerNames[1], PO_READER_NAME) != NULL)
-            {
-                assignReader(PO_READER_INDEX, readerNames[1]);
-                if (strstr(readerNames[0], CSM_READER_NAME) != NULL)
-                {
-                    assignReader(CSM_READER_INDEX, readerNames[0]);
-                    allReadersFound = true;
-                }
-            }
-        }
-        if (allReadersFound)
-        {
-            struct readerDescriptor_s reader;
-
-            // set SDK reader callbacks for PO reader (0)
-            reader.openChannel  = reader0_openChannel;
-            reader.closeChannel = reader0_closeChannel;
-            reader.transmit     = reader0_transmit;
-
-            setReader(PO_READER_INDEX, reader);
-
-            // set SDK reader callbacks for CSM reader (1)
-            reader.openChannel  = reader1_openChannel;
-            reader.closeChannel = reader1_closeChannel;
-            reader.transmit     = reader1_transmit;
-
-            setReader(CSM_READER_INDEX, reader);
-
-            doTransaction();
-        }
+        ;
     }
+    serequest_execute(&keyple_ctx, po_reader, &se_req);
+
     printf("Press a key to exit.");
     getchar();
     return 0;

@@ -10,29 +10,33 @@ PROJECT(SdkCEmbeddePCPcSc C)
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
 # specific settings
-if(MSVC)
-    add_definitions(-D_CRT_SECURE_NO_WARNINGS)
-endif()
+IF(MSVC)
+    ADD_DEFINITIONS(-D_CRT_SECURE_NO_WARNINGS)
+ENDIF(MSVC)
  
 # add the paths for include files
 # applications paths
-include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
+INCLUDE_DIRECTORIES("${CMAKE_CURRENT_SOURCE_DIR}/include")
+
 # SDK paths
-include_directories("${CMAKE_SOURCE_DIR}/keyple-core/include")
+INCLUDE_DIRECTORIES("${CMAKE_SOURCE_DIR}/keyple-core/include")
+INCLUDE_DIRECTORIES("${CMAKE_SOURCE_DIR}/keyple-reader-drivers/pcsc/")
 
 # add the executable
-add_executable(ExamplePCSC 
-			   "${CMAKE_SOURCE_DIR}/keyple-core/src/keyple_reader_interface.c"
-			   "${CMAKE_CURRENT_SOURCE_DIR}/src/pcsc_readers.c"
-			   "${CMAKE_CURRENT_SOURCE_DIR}/src/demo_app_main.c"
+ADD_EXECUTABLE(ExamplePCSC 
+			   "${CMAKE_SOURCE_DIR}/keyple-core/src/keyple.c"
+			   "${CMAKE_SOURCE_DIR}/keyple-core/src/keyple_serequest.c"
+			   "${CMAKE_SOURCE_DIR}/keyple-core/src/keyple_serequest_pool.c"
+			   "${CMAKE_SOURCE_DIR}/keyple-reader-drivers/pcsc/pcsc_reader.c"
 			   "${CMAKE_CURRENT_SOURCE_DIR}/src/log.c"
+			   "${CMAKE_CURRENT_SOURCE_DIR}/src/demo_app_main.c"
 			   )
 
 # add PC/SC lib
 IF(WIN32)
-target_link_libraries(ExamplePCSC winscard)
+TARGET_LINK_LIBRARIES(ExamplePCSC winscard)
 ENDIF(WIN32)
 
 IF(UNIX)
-target_link_libraries(ExamplePCSC pcsclite)
+TARGET_LINK_LIBRARIES(ExamplePCSC pcsclite)
 ENDIF(UNIX)
